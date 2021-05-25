@@ -1,1 +1,25 @@
-<p>github-repositories-list works!</p>
+<div class="flex justify-center" *ngIf="repositories">
+    <div class="container">
+        <div>
+            <h2 class="text-center text-2xl font-medium text-gray-500 mb-8">Estos son tus repositorios</h2>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+           <div 
+                *ngFor="let repository of repositories"
+                class="w-full border-2 border-gray-200 rounded-2xl p-4">
+                <div class="flex flex-col items-center">
+                    <div class="pb-2">
+                        <a 
+                            class="text-red-500"
+                            [href]="repository.url" 
+                            target="_blank">
+                            {{ repository.name }}
+                        </a>
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-500">12.0.1</p>
+                    </div>
+                </div>
+           </div>
+    </div>
+</div>
