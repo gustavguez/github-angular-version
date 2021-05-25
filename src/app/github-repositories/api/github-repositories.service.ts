@@ -30,7 +30,9 @@ export class GithubRepositoriesService {
             resp.push(model);
           });
         }
-        return resp;
+        return resp.sort((a: GithubRepositoryModel, b: GithubRepositoryModel) => {
+          return (a.updateAt! > b.updateAt!) ? -1 : 1;
+        });
       })
     );
   }

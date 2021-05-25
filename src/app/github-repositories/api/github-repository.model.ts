@@ -1,7 +1,8 @@
 export class GithubRepositoryModel {
     constructor(
         public name?: string,
-        public url?: string
+        public url?: string,
+        public updateAt?: Date
     ){}
 
     public fromJSON(json: any) {
@@ -11,5 +12,6 @@ export class GithubRepositoryModel {
         
         this.name = json.full_name;
         this.url = json.html_url;
+        this.updateAt = new Date(json.updated_at);
     }
 }
