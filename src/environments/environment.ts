@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   githubApiUrl: 'https://api.github.com/users/:username/repos',
+  githubRawUrl: 'https://raw.githubusercontent.com',
   avatarsGeneratorUrl: 'https://ui-avatars.com/api/'
 };
 
