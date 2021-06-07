@@ -1,6 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { GithubRepositoriesService } from '../api/github-repositories.service';
+import { Component, Input } from '@angular/core';
 import { GithubRepositoryModel } from '../api/github-repository.model';
 
 @Component({

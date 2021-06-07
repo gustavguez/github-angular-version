@@ -11,8 +11,6 @@ import { GithubRepositoryModel } from './github-repository.model';
 })
 export class GithubRepositoriesService {
 
-  onNewRepositoriesFetched: EventEmitter<GithubRepositoryModel[] | null> = new EventEmitter();
-
   constructor(
     private httpClient: HttpClient
   ) { }
@@ -35,9 +33,5 @@ export class GithubRepositoriesService {
         });
       })
     );
-  }
-
-  public notifyNewRepositoriesFetched(repositories: GithubRepositoryModel[] | null) {
-    this.onNewRepositoriesFetched.emit(repositories);
   }
 }
