@@ -4,7 +4,7 @@
             <h1 class="text-center text-4xl font-medium">Encuentra tus repositorios Angular</h1>
         </div>
         <div>
-            <form action="inline-block w-full" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+            <form action="inline-block w-full" [formGroup]="searchForm" (ngSubmit)="onSearchEmit()">
                 <div class="inline-block w-2/3 h-20">
                     <input 
                         formControlName="username"

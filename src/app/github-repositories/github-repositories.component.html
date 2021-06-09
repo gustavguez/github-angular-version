@@ -1,2 +1,7 @@
-<app-github-repositories-header></app-github-repositories-header>
-<app-github-repositories-list></app-github-repositories-list>
+<app-github-repositories-header
+    [isLoading]="isLoading"
+    (onSearch)="onSearch($event)">
+</app-github-repositories-header>
+<app-github-repositories-list
+    [repositories]="repositories">
+</app-github-repositories-list>
